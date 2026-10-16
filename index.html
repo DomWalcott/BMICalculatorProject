@@ -1,0 +1,71 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>BMI Calculator</title>
+        <link rel ="stylesheet" href="./styles.css"/>
+    </head>
+    <body id="images">
+        <div id="mainTing">
+        <div class="heading">
+        <h1>
+            BMI Calculator
+        </h1>
+
+            <div/>
+            <div class="WHinput">
+                <h2><br>Please enter your weight in KG and your height in metres</h2>
+                <div class="boxes">
+                    <input type="number" id="weight" placeholder="Weight">
+                    <input type="number" id="height" placeholder="Height">
+                <div/>
+                <button onclick="calculateBMI()">Get result</button>
+            <div/>
+            <div class="resultsWindow">
+                <p id="output"></p>
+            <div/>
+            <div class="resultsWindow">
+            <p id="results"></p>
+        </div>
+        </div>
+        <script>
+            let userWeight;
+            let userHeight;
+            let BMI;
+
+            function calculateBMI(){
+                userWeight = Number(document.getElementById("weight").value);
+                userHeight = Number(document.getElementById("height").value);
+
+                BMI = userWeight / (userHeight*userHeight);
+                BMI = BMI.toFixed(1);
+                if (BMI == "NaN"){
+                    document.getElementById("output").textContent="Please enter valid numbers";
+
+                }
+                else if (BMI <10 || BMI >80){
+                    document.getElementById("output").textContent="Please enter valid numbers";
+                }
+                else{
+                    document.getElementById("output").textContent="Your BMI is: " + BMI;
+                    console.log(BMI);
+            
+                    if (BMI <=18.5){
+                        document.getElementById("results").textContent="You are classed as underweight";
+                    }
+                    else if (BMI >18.5 && BMI < 25){
+                        document.getElementById("results").textContent="You are classed as having a healthy BMI";
+                    }
+                    else if (BMI >=25 && BMI <30){
+                        document.getElementById("results").textContent="You are classed as overweight";
+                    }
+                    else if(BMI >=30){
+                        document.getElementById("results").textContent="You are classed as obese";
+                    }
+                }
+
+            }
+        </script>
+    </body>
+</html>

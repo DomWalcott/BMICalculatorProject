@@ -1,0 +1,51 @@
+.heading{
+    display:flex;
+        justify-content: center;
+        align-items: center;
+    flex-direction: column
+    
+}
+body{
+    background-image: url("./images/abstract-japanese-wave-pattern-design_1048-16036.avif");
+    background-size: 100v 100vh;
+}
+
+.WHinput{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+    button{
+        background-color: azure;
+        color:darkcyan;
+        border-radius: 10px;
+        Height:30px;
+        margin:10px;
+        align-items: center;       
+    }
+}
+
+.resultsWindow{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#mainTing{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:darkcyan;
+    border: 10px, solid;
+    border-color: black;
+    border-radius: 50px;
+    padding:2%;
+    position:absolute;
+    left: 30%;
+    top:40px;
+    display:flex;
+    justify-content: center;
+    width: max-content;
+    align-items: center;
+    background-color: aliceblue;
+}
