@@ -56,9 +56,13 @@ body{
         flex-direction: column;
         justify-content: center;
     }
+    #height, #weight{
+        width:400px;
+        height:50px;
+    }
 
     #mainTing{
-        left: 10%;
+        left: 5%;
         top: 40%;
     }
 }
